@@ -1,0 +1,57 @@
+.loginPage {
+    background-color: #212121;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+    background-color: #171717;
+    border-radius: 16px;
+    border: solid 0.5px rgba(255, 255, 255, 0.1);
+}
+
+.loginBox h1 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+}
+
+.loginBox p {
+    color: #b4b4b4;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.googleBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: 500;
+    width: 100%;
+    justify-content: center;
+}
+
+.googleBtn img {
+    height: 18px;
+    width: 18px;
+}
+
+.googleBtn:hover {
+    background-color: #f0f0f0;
+}
