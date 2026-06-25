@@ -9,7 +9,7 @@ function Sidebar() {
     const getAllThreads = async () => {
         if(!user) return;
         try {
-            const response = await fetch(`http://localhost:8080/api/thread?userId=${user.uid}`);
+            const response = await fetch(`https://thinkora-backend-cgyo.onrender.com/api/thread?userId=${user.uid}`);
             const res = await response.json();
             const filteredData = res.map(thread => ({ threadId: thread.threadId, title: thread.title }));
             setAllThreads(filteredData);
@@ -33,7 +33,7 @@ function Sidebar() {
     const changeThread = async (newThreadId) => {
         setCurrThreadId(newThreadId);
         try {
-            const response = await fetch(`http://localhost:8080/api/thread/${newThreadId}`);
+            const response = await fetch(`https://thinkora-backend-cgyo.onrender.com/api/thread/${newThreadId}`);
             const res = await response.json();
             setPrevChats(res);
             setNewChat(false);
@@ -45,7 +45,7 @@ function Sidebar() {
 
     const deleteThread = async (threadId) => {
         try {
-            await fetch(`http://localhost:8080/api/thread/${threadId}`, { method: "DELETE" });
+            await fetch(`https://thinkora-backend-cgyo.onrender.com/api/thread/${threadId}`, { method: "DELETE" });
             setAllThreads(prev => prev.filter(thread => thread.threadId !== threadId));
             if(threadId === currThreadId) createNewChat();
         } catch(err) {
